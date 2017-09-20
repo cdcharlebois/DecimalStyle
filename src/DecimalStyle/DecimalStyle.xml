@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="DecimalStyle.widget.DecimalStyle" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>DecimalStyle</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+        <property key="field" type="attribute" required="true" isPath="optional" pathType="reference">
+            <caption>Decimal Field</caption>
+            <category>General</category>
+            <description></description>
+            <attributeTypes>
+                <attributeType name="Decimal" />
+            </attributeTypes>
+        </property>
+        <property key="beforeClassname" type="string" required="false" defaultValue="">
+            <caption>Before Classname</caption>
+            <category>General</category>
+            <description></description>
+        </property>
+        <property key="afterClassname" type="string" required="false" defaultValue="">
+            <caption>After Classname</caption>
+            <category>General</category>
+            <description></description>
+        </property>
+        <property key="beforePrepend" type="string" required="false" defaultValue="">
+            <caption>Before Prepend</caption>
+            <category>General</category>
+            <description>If you'd like to add any characters to the string that's displayed. i.e. $</description>
+        </property>
+        <property key="decimalPlaces" type="integer" required="true" defaultValue="2">
+            <caption>Decimal Places</caption>
+            <category>General</category>
+            <description></description>
+        </property>
+    </properties>
+</widget>
