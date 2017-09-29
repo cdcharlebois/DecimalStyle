@@ -44,6 +44,7 @@ define([
         update: function(obj, callback) {
             logger.debug(this.id + ".update");
 
+
             this._contextObj = obj;
             var _attrHandle = this.subscribe({
                 guid: this._contextObj, // the guid

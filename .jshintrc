@@ -1,23 +1,24 @@
 {
     // Enforcing
-    "curly"    : false,
-    "forin"    : false,
-    "latedef"  : "nofunc",
-    "newcap"   : true,
-    "quotmark" : "double",
-    "eqeqeq"   : true,
-    "undef"    : true,
-    "globals"  : {
-        "mendix" : false,
-        "mx"     : false,
-        "logger" : false
+    "curly": true,
+    "forin": false,
+    "latedef": "nofunc",
+    "newcap": true,
+    "quotmark": "double",
+    "eqeqeq": true,
+    "undef": true,
+    "unused": true,
+    "globals": {
+        "mendix": false,
+        "mx": false,
+        "logger": false
     },
 
     // Relaxing
-    "laxbreak" : true,
+    "laxbreak": true,
 
     // Environments
-    "browser"  : true,
-    "devel"    : true,
-    "dojo"     : true
+    "browser": true,
+    "devel": true,
+    "dojo": true
 }
