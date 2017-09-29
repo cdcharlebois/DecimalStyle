@@ -52,6 +52,7 @@ define([
                     this._updateRendering(); // do something
                 })
             });
+            this._handles.push(_attrHandle);
             this._updateRendering(callback);
         },
 
