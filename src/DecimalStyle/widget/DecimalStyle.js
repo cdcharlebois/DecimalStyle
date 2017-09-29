@@ -45,6 +45,13 @@ define([
             logger.debug(this.id + ".update");
 
             this._contextObj = obj;
+            var _attrHandle = this.subscribe({
+                guid: this._contextObj, // the guid
+                attr: this.field, // the attributeName
+                callback: lang.hitch(this, function(guid, attr, attrValue) {
+                    this._updateRendering(); // do something
+                })
+            });
             this._updateRendering(callback);
         },
 
@@ -54,6 +61,7 @@ define([
 
         uninitialize: function() {
             logger.debug(this.id + ".uninitialize");
+            this.unsubscribeAll();
         },
 
         _updateRendering: function(callback) {
