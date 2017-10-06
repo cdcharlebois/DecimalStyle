@@ -75,7 +75,7 @@ define([
                 defaultAfter += "0";
             }
             // add the prepend node in here somewhere
-            this.prependNode.innerHTML = this.beforePrepend;
+            this.prependNode.innerHTML = encodeURI(this.beforePrepend);
             dojoClass.add(this.prependNode, this.prependClassname);
             var split = displayString.split('.');
             this.beforeNode.innerHTML = split[0];
