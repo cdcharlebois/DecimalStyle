@@ -24,6 +24,11 @@
             <category>General</category>
             <description></description>
         </property>
+        <property key="prependClassname" type="string" required="false" defaultValue="">
+            <caption>Prepend Classname</caption>
+            <category>General</category>
+            <description></description>
+        </property>
         <property key="beforePrepend" type="string" required="false" defaultValue="">
             <caption>Before Prepend</caption>
             <category>General</category>
@@ -32,7 +37,7 @@
         <property key="decimalPlaces" type="integer" required="true" defaultValue="2">
             <caption>Decimal Places</caption>
             <category>General</category>
-            <description></description>
+            <description>*Note: uses javascript (`toFixed()`) so it will round your value.</description>
         </property>
     </properties>
 </widget>

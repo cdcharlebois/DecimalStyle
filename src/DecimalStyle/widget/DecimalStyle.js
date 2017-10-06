@@ -74,9 +74,11 @@ define([
             for (var i = 0; i < this.decimalPlaces; i++) {
                 defaultAfter += "0";
             }
-
+            // add the prepend node in here somewhere
+            this.prependNode.innerHTML = this.beforePrepend;
+            dojoClass.add(this.prependNode, this.prependClassname);
             var split = displayString.split('.');
-            this.beforeNode.innerHTML = this.beforePrepend + split[0];
+            this.beforeNode.innerHTML = split[0];
             dojoClass.add(this.beforeNode, this.beforeClassname)
             this.afterNode.innerHTML = split[1] ? (split[1].length == this.decimalPlaces ? split[1] : split[1] + "0") : defaultAfter;
             dojoClass.add(this.afterNode, this.afterClassname)
