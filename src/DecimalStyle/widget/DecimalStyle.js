@@ -54,6 +54,13 @@ define([
         })
       });
       this._handles.push(_attrHandle);
+      var _objHandle = this.subscribe({
+        guid: this._contextObj.getGuid(),
+        callback: lang.hitch(this, function(guid) {
+          this._updateRendering();
+        })
+      });
+      this._handles.push(_objHandle);
       this._updateRendering(callback);
     },
 
