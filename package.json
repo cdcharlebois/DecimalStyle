@@ -1,6 +1,6 @@
 {
   "name": "DecimalStyle",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Render a Decimal data point as separate spans",
   "license": "Apache 2",
   "author": "Conner Charlebois",
