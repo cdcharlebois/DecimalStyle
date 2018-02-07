@@ -3,9 +3,15 @@ typora-copy-images-to: ./assets
 typora-root-url: .
 ---
 
-![badge](https://img.shields.io/badge/mendix-7.5.0-green.svg) ![badge](https://img.shields.io/badge/mobile-friendly-green.svg)
+![badge](https://img.shields.io/badge/mendix-5.19.0-green.svg)
+![badge](https://img.shields.io/badge/mendix-6.10.9-green.svg)
+![badge](https://img.shields.io/badge/mobile-friendly-green.svg)
 
-# DecimalStyle
+# Custom Input Mask
+
+##### (formerly known as InputBoxOctober)
+
+
 
 ![E8F59EBB-2CC9-4728-8969-5E7DD1C66A28](/assets/E8F59EBB-2CC9-4728-8969-5E7DD1C66A28.png)
 

@@ -62,19 +62,22 @@ define([
         },
         _updateRendering: function(callback) {
             logger.debug(this.id + "._updateRendering");
-            var displayString = "" + (this._contextObj.get(this.field) * 1)
-                .toFixed(this.decimalPlaces);
-            var defaultAfter = "";
-            for (var i = 0; i < this.decimalPlaces; i++) {
-                defaultAfter += "0";
+            var value = this._contextObj.get(this.field) * 1,
+                displayString = ("" + value.toFixed(this.decimalPlaces)).split("-").join(""),
+                defaultAfter = this._getTrailingZeroes(this.decimalPlaces);
+            if (value < 0) {
+                dojoClass.add(this.domNode, "ds-negative");
             }
-            // add the prepend node in here somewhere
             this.prependNode.innerHTML = this.beforePrepend;
             dojoClass.add(this.prependNode, this.prependClassname);
             var split = displayString.split('.');
             this.beforeNode.innerHTML = split[0];
             dojoClass.add(this.beforeNode, this.beforeClassname)
-            this.afterNode.innerHTML = split[1] ? (split[1].length == this.decimalPlaces ? split[1] : split[1] + "0") : defaultAfter;
+            this.afterNode.innerHTML = split[1] ?
+                (split[1].length == this.decimalPlaces ?
+                    split[1] :
+                    split[1] + this._getTrailingZeroes(this.decimalPlaces - split[1].length)) :
+                defaultAfter;
             dojoClass.add(this.afterNode, this.afterClassname)
             if (this._contextObj !== null) {
                 dojoStyle.set(this.domNode, "display", "block");
@@ -87,6 +90,13 @@ define([
             if (cb && typeof cb === "function") {
                 cb();
             }
+        },
+        _getTrailingZeroes: function(numberOfZeroes) {
+            var ret = "";
+            for (var i = 0; i < numberOfZeroes; i++) {
+                ret += "0";
+            }
+            return ret;
         }
     });
 });
